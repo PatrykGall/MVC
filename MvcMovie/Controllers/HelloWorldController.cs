@@ -1,19 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
 
 namespace MvcMovie.Controllers;
 
 public class HelloWorldController : Controller
 {
-    // 
-    // GET: /HelloWorld/
-    public string Index()
+    // Wywoływane przez: https://localhost:XXXX/HelloWorld
+    public IActionResult Index()
     {
-        return "To jest moja domyślna akcja (Index)...";
+        return View();
     }
 
-    // 
-    // GET: /HelloWorld/Welcome/ 
+    // Wywoływane przez: https://localhost:XXXX/HelloWorld/Welcome
     public string Welcome()
     {
         return "To jest metoda Welcome!";
